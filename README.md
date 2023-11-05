@@ -18,14 +18,6 @@ Me too, which is why I'm using absolute imports to make it look nice and clean:
 import Layout from "@layouts/Layout.astro";
 ```
 
-## Accessibility
-
-One of my favourite topics! I've added a bunch of handy utilities which will not only improve accessibility but usability in general. Here's a list of them:
-
-- "Back to top" button
-- External link (showing icon)
-- Skip link
-
 ## CSS reset
 
 I never start a project without Andy Bell's (more) modern CSS reset! It lays the foundation for what I'm about to do with Utopia's fluid responsive design. Click here for more info about these settings: [A (more) modern CSS reset](https://andy-bell.co.uk/a-more-modern-css-reset/)
@@ -46,9 +38,9 @@ You should also check out [The ideal viewport doesn’t exist](https://viewports
 
 Commiting to something can sometimes take a lot of effort. Commiting code is no exception, but at least here we can pull out the safety net to soften our fall in case we made a mistake. In this case it's running `astro check`, which will look for the following things in your project:
 
-- Errors 🚨
-- Warnings ⚠️
-- Hints ❓
+- Errors
+- Warnings
+- Hints
 
 ## Preference detection
 
@@ -71,3 +63,11 @@ Better safe than sorry, am I right? There are multiple ways to add security head
 - X-Content-Type-Options
 - Referrer-Policy
 - Permissions-Policy
+
+## Usability
+
+I've added a bunch of handy utilities which will not only improve usability, but accessibility as well. Here's a list of them:
+
+- "Back to top" button
+- External link (showing icon)
+- Skip link

@@ -29,14 +29,13 @@ import gitHub from "@images/github.svg";
     <a
       id="template-button"
       href="https://github.com/stevefrenzel/astronaut/generate/"
-      ><span> Use this template</span>
+      ><span> Use template</span>
       <Image alt="GitHub logo" src={gitHub} height={60} width={60} />
     </a>
     <p id="template-text">
-      (Or check it out on <ExternalLink
-        href="https://github.com/stevefrenzel/astronaut"
-        name="GitHub"
-      /> first)
+      (Or check it out on <a href="https://github.com/stevefrenzel/astronaut"
+        >GitHub</a
+      > first)
     </p>
     <br aria-hidden="true" />
     <p>
@@ -56,184 +55,210 @@ import gitHub from "@images/github.svg";
   <main id="main">
     <h2>Table of contents</h2>
     <ul id="table-of-contents" role="list">
-      <li><a href="#imports">Absolute Imports</a></li>
-      <li><a href="#a11y">Accessibility</a></li>
-      <li><a href="#reset">CSS Reset</a></li>
-      <li><a href="#fonts">Custom Fonts</a></li>
-      <li><a href="#utopia">Fluid Responsive Design</a></li>
-      <li><a href="#preference">Preference Detection</a></li>
-      <li><a href="#hooks">Pre-Commit Hooks</a></li>
-      <li><a href="#prettier">Prettier Config</a></li>
-      <li><a href="#seo">SEO</a></li>
-      <li><a href="#security">Security Headers</a></li>
+      <li>
+        <a href="#imports">Absolute Imports</a>
+        <span aria-hidden="true"> 📥</span>
+      </li>
+      <li><a href="#reset">CSS Reset</a><span aria-hidden="true"> 💥</span></li>
+      <li>
+        <a href="#fonts">Custom Fonts</a><span aria-hidden="true"> 🔤</span>
+      </li>
+      <li>
+        <a href="#utopia">Fluid Responsive Design</a><span aria-hidden="true">
+          🌊</span
+        >
+      </li>
+      <li>
+        <a href="#preference">Preference Detection</a><span aria-hidden="true"
+        ></span>
+         👀
+      </li>
+      <li>
+        <a href="#hooks">Pre-Commit Hooks</a><span aria-hidden="true"> 🐶</span>
+      </li>
+      <li>
+        <a href="#prettier">Prettier Config</a><span aria-hidden="true">
+          💅</span
+        >
+      </li>
+      <li><a href="#seo">SEO</a><span aria-hidden="true"> 🔍</span></li>
+      <li>
+        <a href="#security">Security Headers</a><span aria-hidden="true">
+          🔒</span
+        >
+      </li>
+      <li>
+        <a href="#usability">Usability</a><span aria-hidden="true"> 🌐</span>
+      </li>
     </ul>
+  </main>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="imports">Absolute Imports <span aria-hidden="true">📥</span></h2>
-    <p>Tired of your imports looking like this?</p>
-    <pre>
+  <h2 id="imports">Absolute Imports <span aria-hidden="true">📥</span></h2>
+  <p>Tired of your imports looking like this?</p>
+  <pre>
         <code class="code-block">
           import Layout from "../../../../../layouts/Layout.astro";
         </code>
       </pre>
-    <p>
-      Me too, which is why I'm using absolute imports to make it look nice and
-      clean:
-    </p>
-    <pre>
+  <p>
+    Me too, which is why I'm using absolute imports to make it look nice and
+    clean:
+  </p>
+  <pre>
         <code class="code-block">
           import Layout from "@layouts/Layout.astro";
         </code>
       </pre>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="a11y">Accessibility <span aria-hidden="true">🌐</span></h2>
-    <p>
-      One of my favourite topics! I've added a bunch of handy utilities which
-      will not only improve accessibility but usability in general. Here's a
-      list of them:
-    </p>
-    <br aria-hidden="true" />
-    <ul role="list">
-      <li>"Back to top" button</li>
-      <li>External link (showing icon)</li>
-      <li>Skip link</li>
-    </ul>
+  <h2 id="reset">CSS Reset <span aria-hidden="true">💥</span></h2>
+  <p>
+    I never start a project without Andy Bell's <ExternalLink
+      href="https://andy-bell.co.uk/a-more-modern-css-reset/"
+      name="(more) modern CSS reset"
+    />! It lays the foundation for what I'm about to do with Utopia's fluid
+    responsive design.
+  </p>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="reset">CSS Reset <span aria-hidden="true">💥</span></h2>
-    <p>
-      I never start a project without Andy Bell's <ExternalLink
-        href="https://andy-bell.co.uk/a-more-modern-css-reset/"
-        name="(more) modern CSS reset"
-      />! It lays the foundation for what I'm about to do with Utopia's fluid
-      responsive design.
-    </p>
+  <h2 id="fonts">Custom Fonts <span aria-hidden="true">🔤</span></h2>
+  <p>
+    Using system fonts is a safe and performant way to add some identity to your
+    typography, but let's be honest: They're overused and quite boring. Which is
+    why I like to use custom fonts, usually one for headlines and one for body
+    text. You can of course always change them to Lobster or Papyrus, I won't
+    judge.
+  </p>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="fonts">Custom Fonts <span aria-hidden="true">🔤</span></h2>
-    <p>
-      Using system fonts is a safe and performant way to add some identity to
-      your typography, but let's be honest: They're overused and quite boring.
-      Which is why I like to use custom fonts, usually one for headlines and one
-      for body text. You can of course always change them to Lobster or Papyrus,
-      I won't judge.
-    </p>
+  <h2 id="utopia">
+    Fluid Responsive Design <span aria-hidden="true">🌊</span>
+  </h2>
+  <p>
+    I need you to sit down for this one. You don't really need breakpoints to
+    define your layout for mobile, tablet and desktop devices. How could you
+    even anticipate what device will be used to gaze upon your beautiful
+    website?
+  </p>
+  <br aria-hidden="true" />
+  <p>
+    Wouldn't make it more sense if you had a fluid, yet robust design which
+    works for all viewports? Which requires less code and no <code
+      >breakpoints.css</code
+    >
+     nearing 1000 lines of code? Let me introduce you to <ExternalLink
+      href="https://utopia.fyi/"
+      name="Utopia"
+    />, which is used to generate adaptive font sizes and spacing.
+  </p>
+  <br aria-hidden="true" />
+  <p>
+    You should also check out <ExternalLink
+      href="https://viewports.fyi/"
+      name="viewports.fyi"
+    /> for a deep-dive into this topic. And while you're at it, have a look at
 
-    <div class="spacer"></div>
+    <ExternalLink
+      href="https://buildexcellentwebsit.es/"
+      name="buildexcellentwebsit.es"
+    /> as well.
+  </p>
 
-    <h2 id="utopia">
-      Fluid Responsive Design <span aria-hidden="true">🌊</span>
-    </h2>
-    <p>
-      I need you to sit down for this one. You don't really need breakpoints to
-      define your layout for mobile, tablet and desktop devices. How could you
-      even anticipate what device will be used to gaze upon your beautiful
-      website?
-    </p>
-    <br aria-hidden="true" />
-    <p>
-      Wouldn't make it more sense if you had a fluid, yet robust design which
-      works for all viewports? Which requires less code and no <code
-        >breakpoints.css</code
-      >
-       nearing 1000 lines of code? Let me introduce you to <ExternalLink
-        href="https://utopia.fyi/"
-        name="Utopia"
-      />, which is used to generate adaptive font sizes and spacing.
-    </p>
-    <br aria-hidden="true" />
-    <p>
-      You should also check out <ExternalLink
-        href="https://viewports.fyi/"
-        name="viewports.fyi"
-      /> for a deep-dive into this topic. And while you're at it, have a look at
+  <div class="spacer"></div>
 
+  <h2 id="preference">
+    Preference Detection <span aria-hidden="true">👀</span>
+  </h2>
+  <p>
+    This template automatically changes the theme based on your operating
+    settings by utilising <ExternalLink
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
+      name="prefers-color-scheme"
+    />. It also checks if you prefer reduced motions via
+    <ExternalLink
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+      name="prefers-reduced-motion"
+    />. Look and behold, the power of CSS!
+  </p>
 
-      <ExternalLink
-        href="https://buildexcellentwebsit.es/"
-        name="buildexcellentwebsit.es"
-      /> as well.
-    </p>
+  <div class="spacer"></div>
 
-    <div class="spacer"></div>
+  <h2 id="hooks">Pre-Commit Hooks <span aria-hidden="true">🐶</span></h2>
+  <p>
+    Commiting to something can sometimes take a lot of effort. Commiting code is
+    no exception, but at least here we can pull out the safety net to soften our
+    fall in case we made a mistake. In this case it's running
+    <code>astro check</code> (powered by <ExternalLink
+      href="https://typicode.github.io/husky/"
+      name="Husky"
+    />), which will look for the following things in your project BEFORE your
+    code is being commited:
+  </p>
+  <br aria-hidden="true" />
 
-    <h2 id="preference">
-      Preference Detection <span aria-hidden="true">👀</span>
-    </h2>
-    <p>
-      This template automatically changes the theme based on your operating
-      settings by utilising <ExternalLink
-        href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
-        name="prefers-color-scheme"
-      />. It also checks if you prefer reduced motions via
-      <ExternalLink
-        href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
-        name="prefers-reduced-motion"
-      />. Look and behold, the power of CSS!
-    </p>
+  <ul id="hooks-list" role="list">
+    <li>Errors <span aria-hidden="true">🚨</span></li>
+    <li>Warnings <span aria-hidden="true">⚠️</span></li>
+    <li>Hints <span aria-hidden="true">💡</span></li>
+  </ul>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="hooks">Pre-Commit Hooks <span aria-hidden="true">🐶</span></h2>
-    <p>
-      Commiting to something can sometimes take a lot of effort. Commiting code
-      is no exception, but at least here we can pull out the safety net to
-      soften our fall in case we made a mistake. In this case it's running
-      <code>astro check</code> (powered by <ExternalLink
-        href="https://typicode.github.io/husky/"
-        name="Husky"
-      />), which will look for the following things in your project BEFORE your
-      code is being commited:
-    </p>
-    <ul id="hooks-list" role="list">
-      <li>Errors</li>
-      <li>Warnings</li>
-      <li>Hints</li>
-    </ul>
+  <h2 id="prettier">Prettier Config <span aria-hidden="true">💅</span></h2>
+  <p>
+    I don't know about you, but if my code is not nicely formatted after hitting
+    save, I'm starting to feel very weird. Which is why this comes with a
+    Prettier configuration, in case you're using it. Or a you one of those
+    people who do this manually?!
+  </p>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="prettier">Prettier Config <span aria-hidden="true">💅</span></h2>
-    <p>
-      I don't know about you, but if my code is not nicely formatted after
-      hitting save, I'm starting to feel very weird. Which is why this comes
-      with a Prettier configuration, in case you're using it. Or a you one of
-      those people who do this manually?!
-    </p>
+  <h2 id="seo">SEO <span aria-hidden="true">🔍</span></h2>
+  <p>
+    Predefined values for improved search engine optimisation can be found in
+    <code>Layout.astro</code>. These settings have been my reliable companion
+    for a couple of years now and I put a lot of research, work and testing into
+    it.
+  </p>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="seo">SEO <span aria-hidden="true">🔍</span></h2>
-    <p>
-      Predefined values for improved search engine optimisation can be found in
-      <code>Layout.astro</code>. These settings have been my reliable companion
-      for a couple of years now and I put a lot of research, work and testing
-      into it.
-    </p>
+  <h2 id="security">Security Headers <span aria-hidden="true">🔒</span></h2>
+  <p>
+    Better safe than sorry, am I right? There are multiple ways to add security
+    headers to your website and I decided to store them in a
+    <code>vercel.json</code> file, cause this website was deployed to (you
+    guessed it) Vercel. It contains the following headers, feel free to adjust
+    them to your needs:
+  </p>
+  <br aria-hidden="true" />
+  <ul role="list">
+    <li>Content-Security-Policy</li>
+    <li>X-Frame-Options</li>
+    <li>X-Content-Type-Options</li>
+    <li>Referrer-Policy</li>
+    <li>Permissions-Policy</li>
+  </ul>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <h2 id="security">Security Headers <span aria-hidden="true">🔒</span></h2>
-    <p>
-      Better safe than sorry, am I right? There are multiple ways to add
-      security headers to your website and I decided to store them in a
-      <code>vercel.json</code> file, cause this website was deployed to (you
-      guessed it) Vercel. It contains the following headers, feel free to adjust
-      them to your needs:
-    </p>
-    <ul role="list">
-      <li>Content-Security-Policy</li>
-      <li>X-Frame-Options</li>
-      <li>X-Content-Type-Options</li>
-      <li>Referrer-Policy</li>
-      <li>Permissions-Policy</li>
-    </ul>
-  </main>
+  <h2 id="usability">Usability <span aria-hidden="true">🌐</span></h2>
+  <p>
+    I've added a bunch of handy utilities which will not only improve usability,
+    but accessibility as well:
+  </p>
+  <br aria-hidden="true" />
+  <ul role="list">
+    <li>"Back to top" button</li>
+    <li>External link (showing icon)</li>
+    <li>Skip link</li>
+  </ul>
 </div>
 
 <footer>
@@ -260,6 +285,7 @@ import gitHub from "@images/github.svg";
     align-items: center;
     background: purple;
     border-radius: var(--border-radius);
+    box-shadow: 0px 0px 30px 0px purple;
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -271,13 +297,27 @@ import gitHub from "@images/github.svg";
     width: fit-content;
   }
 
+  #template-button:focus,
+  #template-button:hover {
+    box-shadow: none;
+  }
+
   #template-button img {
     margin: 0;
   }
 
   #template-text {
+    font-size: var(--step-0);
     margin: var(--space-2xs) auto 0 auto;
     width: fit-content;
+  }
+
+  #template-text a {
+    font-size: var(--step-0);
+  }
+
+  #template-text a::after {
+    content: " ↪";
   }
 
   blockquote {
@@ -311,58 +351,9 @@ import gitHub from "@images/github.svg";
     color: var(--color-yellow) !important;
   }
 
-  ul {
-    margin: var(--space-s) 0 0 0;
-  }
-
   ul,
   li {
-    padding: 0;
-  }
-
-  li::before {
-    content: "✨ ";
-  }
-
-  #table-of-contents li:nth-child(1)::before {
-    content: "📥 ";
-  }
-  #table-of-contents li:nth-child(2)::before {
-    content: "🌐 ";
-  }
-  #table-of-contents li:nth-child(3)::before {
-    content: "💥 ";
-  }
-  #table-of-contents li:nth-child(4)::before {
-    content: "🔤 ";
-  }
-  #table-of-contents li:nth-child(5)::before {
-    content: "🌊 ";
-  }
-  #table-of-contents li:nth-child(6)::before {
-    content: "👀 ";
-  }
-  #table-of-contents li:nth-child(7)::before {
-    content: "🐶 ";
-  }
-  #table-of-contents li:nth-child(8)::before {
-    content: "💅 ";
-  }
-  #table-of-contents li:nth-child(9)::before {
-    content: "🔍 ";
-  }
-  #table-of-contents li:nth-child(10)::before {
-    content: "🔒 ";
-  }
-
-  #hooks-list li:nth-child(1)::before {
-    content: "🚨 ";
-  }
-  #hooks-list li:nth-child(2)::before {
-    content: "⚠️ ";
-  }
-  #hooks-list li:nth-child(3)::before {
-    content: "❓ ";
+    margin: 0;
   }
 
   footer {
