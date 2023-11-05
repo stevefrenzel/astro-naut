@@ -52,7 +52,7 @@ Commiting to something can sometimes take a lot of effort. Commiting code is no 
 
 ## Preference detection
 
-This template automatically changes the theme based on your operating settings by utilising `prefers-contrast` and `prefers-color-scheme`. It also checks if you prefer reduced motion via `prefers-reduced-motion`. Look and behold, the power of CSS!
+This template automatically changes the theme based on your operating settings by utilising `prefers-color-scheme`. It also checks if you prefer reduced motion via `prefers-reduced-motion`. Look and behold, the power of CSS!
 
 ## Prettier
 
