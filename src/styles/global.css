@@ -39,6 +39,11 @@
   outline: none;
 }
 
+:is(a, button, input, textarea, summary):hover {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
 /* General */
 
 body {
@@ -122,7 +127,8 @@ code {
 /* Reduced motion preference */
 
 @media (prefers-reduced-motion: no-preference) {
-  :focus {
+  :focus,
+  :hover {
     transition: outline-offset 0.25s ease;
     outline-offset: 5px;
   }

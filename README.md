@@ -20,7 +20,7 @@ import Layout from "@layouts/Layout.astro";
 
 ## Accessibility
 
-One of my favourite topics! I've added a bunch of handy utilities which will not only improve accessibility but usability in general. Here's a list of them: 
+One of my favourite topics! I've added a bunch of handy utilities which will not only improve accessibility but usability in general. Here's a list of them:
 
 - "Back to top" button
 - External link (showing icon)

@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import ExternalLink from "@utils/ExternalLink.astro";
 import seo from "public/seo.png";
+import gitHub from "@images/github.svg";
 ---
 
 <div class="wrapper">
@@ -25,14 +26,31 @@ import seo from "public/seo.png";
       </blockquote>
     </p>
     <br aria-hidden="true" />
+    <a
+      id="template-button"
+      href="https://github.com/stevefrenzel/astronaut/generate/"
+      ><span> Use this template</span>
+      <Image alt="GitHub logo" src={gitHub} height={60} width={60} />
+    </a>
+    <p id="template-text">
+      (Or check it out on <ExternalLink
+        href="https://github.com/stevefrenzel/astronaut"
+        name="GitHub"
+      /> first)
+    </p>
+    <br aria-hidden="true" />
     <p>
       This is a very opinionated starter template for the static site generator <ExternalLink
         href="https://astro.build/"
         name="Astro"
       />. I'm a big fan of Astro, as it combines two things I really like: A
-      component-based approach and zero client-side JavaScript! This is how I
-      like to set up my projects, but sharing is caring, so: Please use it for
-      your own projects and customise it. Here are all the features:
+      component-based approach and zero client-side JavaScript!
+    </p>
+    <br aria-hidden="true" />
+    <p>
+      This is how I like to set up my projects, but sharing is caring, so:
+      Please use it for your own projects and customise it. Here are all the
+      features:
     </p>
   </header>
   <main id="main">
@@ -238,6 +256,30 @@ import seo from "public/seo.png";
     margin: var(--space-2xl) 0;
   }
 
+  #template-button {
+    align-items: center;
+    background: purple;
+    border-radius: var(--border-radius);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--step-2);
+    gap: var(--space-xs);
+    margin: 0 auto;
+    padding: var(--space-2xs) var(--space-xs);
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  #template-button img {
+    margin: 0;
+  }
+
+  #template-text {
+    margin: var(--space-2xs) auto 0 auto;
+    width: fit-content;
+  }
+
   blockquote {
     font-style: italic;
     margin: 0;
@@ -259,6 +301,10 @@ import seo from "public/seo.png";
     color: var(--color-yellow);
     padding: var(--space-s);
     white-space: inherit;
+  }
+
+  code {
+    word-break: break-all;
   }
 
   .code-block {
