@@ -1,19 +1,5 @@
 # Astronaut - Starter template for Astro
 
-## To Do
-
-- [ ] Create table of contents
-- [ ] Create SEO image & update SEO meta data
-- [x] Update `README.md`
-- [x] Update 404 page
-- [x] Create vertical logo
-- [x] Add theme switch & detection
-- [x] Add focus styles
-- [x] Add & style "Back to top" button
-- [x] Put content of `index.astro` inside `DeleteMe.astro`
-- [x] Create `variables.css`
-- [x] Move global CSS into `Layout.astro`
-
 Astronaut: "A person trained to pilot, navigate, or otherwise participate as a crew member of a spacecraft." [Source](https://www.thefreedictionary.com/astronaut)
 
 I'm a big fan of Astro, as it combines two things I really like: A component-based approach and zero client-side JavaScript! This template is pretty opinionated, as it's composed how I would set up my projects. But sharing is caring, so feel free to use it for your own projects or customise it. Here are all the features:
