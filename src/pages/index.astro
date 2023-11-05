@@ -1,0 +1,16 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SkipLink from "@utils/SkipLink.astro";
+import DeleteMe from "@components/DeleteMe.astro";
+import BackToTop from "@utils/BackToTop.astro";
+---
+
+<Layout title="Astronaut - Astro starter template">
+  <SkipLink />
+  <div class="sr-only" id="start"></div>
+  <DeleteMe />
+  <section aria-label="Utilities">
+    <!-- You could also add a theme switch here or anything considered a utility -->
+    <BackToTop />
+  </section>
+</Layout>

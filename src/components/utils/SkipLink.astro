@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import arrow from "@images/arrow-upward.svg";
+---
+
+<a href="#main" id="skip-link"
+  >Skip to main content <Image
+    alt="Arrow down"
+    height={36}
+    src={arrow}
+    width={36}
+  /></a
+>
+
+<style>
+  a {
+    align-items: center;
+    background: var(--color-accent-light);
+    border-radius: var(--border-radius);
+    color: var(--color-black);
+    display: flex;
+    height: 1px;
+    left: -9999px;
+    padding: var(--space-xs);
+    position: absolute;
+    overflow: hidden;
+    top: auto;
+    width: 1px;
+  }
+
+  a:focus,
+  a:focus-visible {
+    height: auto;
+    left: 8px;
+    position: fixed;
+    text-decoration: none;
+    top: 8px;
+    width: auto;
+  }
+
+  img {
+    margin-left: var(--space-xs);
+    transform: rotate(180deg);
+    filter: invert(1);
+  }
+</style>

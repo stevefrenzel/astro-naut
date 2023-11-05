@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import arrow from "@images/arrow-upward.svg";
+---
+
+<a aria-label="Back to top" href="#start" id="back-to-top">
+  <Image alt="" src={arrow} />
+</a>
+
+<style>
+  a {
+    background: var(--color-accent-light);
+    border-radius: var(--border-radius);
+    bottom: var(--space-xs);
+    position: fixed;
+    right: var(--space-xs);
+  }
+
+  img {
+    filter: invert(1);
+  }
+</style>
+
+<script>
+  const backToTopLink = document.getElementById("back-to-top");
+
+  const toggleBackToTopVisibility = () => {
+    backToTopLink!.style.display = window.scrollY > 0 ? "block" : "none";
+  };
+
+  window.addEventListener("scroll", toggleBackToTopVisibility);
+</script>

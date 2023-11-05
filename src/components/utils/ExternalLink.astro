@@ -1,0 +1,20 @@
+---
+export interface Props {
+  name: string;
+  href: string;
+}
+
+const { href, name } = Astro.props;
+---
+
+<a href={href} class="external-link" rel="noopener noreferrer">{name}</a>
+
+<style>
+  a {
+    color: var(--color-accent-light);
+  }
+
+  a::after {
+    content: " ↪";
+  }
+</style>

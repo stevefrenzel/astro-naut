@@ -1,0 +1,129 @@
+/* Typography */
+
+@font-face {
+  font-display: optional;
+  font-family: "Anybody";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/anybody-v11-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: optional;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v13-latin-regular.woff2") format("woff2");
+}
+
+/* Focus behaviour */
+
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+  --outline-offset: 3px;
+}
+
+:is(a, button, input, textarea, summary):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:is(a, button, input, textarea, summary):focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:is(a, button, input, textarea, summary):focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* General */
+
+body {
+  background: var(--color-black);
+  color: var(--color-grey-light);
+}
+
+h1,
+h2 {
+  color: var(--color-white);
+  font-family: "Anybody", sans-serif;
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+h2 {
+  font-size: var(--step-4);
+}
+
+a,
+blockquote,
+ul,
+p {
+  font-family: "Inter", sans-serif;
+  font-size: var(--step-1);
+}
+
+code {
+  color: var(--color-yellow);
+  font-weight: bold;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Scheme preference */
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--color-white);
+    color: var(--color-black);
+  }
+
+  h1,
+  h2 {
+    color: var(--color-black);
+  }
+
+  code {
+    color: var(--color-green);
+  }
+
+  #back-to-top {
+    background: var(--color-blue);
+  }
+  #back-to-top img {
+    filter: invert(0);
+  }
+
+  .external-link {
+    color: purple !important;
+  }
+
+  #skip-link:focus,
+  #skip-link:focus-visible {
+    background: var(--color-blue);
+    color: var(--color-white);
+  }
+  #skip-link img {
+    filter: invert(0);
+  }
+}
+
+/* Reduced motion preference */
+
+@media (prefers-reduced-motion: no-preference) {
+  :focus {
+    transition: outline-offset 0.25s ease;
+    outline-offset: 5px;
+  }
+}

@@ -1,0 +1,29 @@
+---
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Page not found - 404">
+  <header>
+    <h1>Page not found - 404</h1>
+    <p>
+      Looks like something is wrong with the URL. Let's tack you back to the <a
+        href="/">Homepage</a
+      >!
+    </p>
+  </header>
+</Layout>
+
+<style>
+  header {
+    margin: 0 auto;
+    max-width: 666px;
+  }
+  a {
+    color: var(--color-accent-light);
+  }
+  @media (prefers-color-scheme: light) {
+    a {
+      color: var(--color-blue);
+    }
+  }
+</style>
