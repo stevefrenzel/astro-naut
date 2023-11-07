@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://astronaut-start-template.vercel.app/",
+  site: "https://astro-naut-template.vercel.app/",
 });
