@@ -56,7 +56,7 @@ Predefined values for improved SEO can be found in `Layout.astro`. These setting
 
 ## Security headers
 
-Better safe than sorry, am I right? There are multiple ways to add security headers to your website and I decided to store them in a `vercel.json` file, cause this website was deployed to (you guessed it) Vercel. It contains the following headers, feel free to adjust them to your needs:
+Better safe than sorry, am I right? There are multiple ways to add security headers to your website and I decided to store them in a `vercel.json` file, cause this website was deployed to (you guessed it) [Vercel](https://vercel.com/). It contains the following headers, feel free to adjust them to your needs:
 
 - Content-Security-Policy
 - X-Frame-Options
