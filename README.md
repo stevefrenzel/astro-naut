@@ -70,4 +70,5 @@ I've added a bunch of handy utilities which will not only improve usability, but
 
 - "Back to top" button
 - External link (showing icon)
+- Improved focus behaviour (thanks to [Stephanie Eckles](https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/) & [Adam Argyle](https://codepen.io/argyleink/pen/JjEzeLp))
 - Skip link

@@ -234,8 +234,8 @@ import gitHub from "@images/github.svg";
     Better safe than sorry, am I right? There are multiple ways to add security
     headers to your website and I decided to store them in a
     <code>vercel.json</code> file, cause this website was deployed to (you
-    guessed it) Vercel. It contains the following headers, feel free to adjust
-    them to your needs:
+    guessed it) <ExternalLink href="https://vercel.com/" name="Vercel" />. It
+    contains the following headers, feel free to adjust them to your needs:
   </p>
   <br aria-hidden="true" />
   <ul role="list">
@@ -257,12 +257,24 @@ import gitHub from "@images/github.svg";
   <ul role="list">
     <li>"Back to top" button</li>
     <li>External link (showing icon)</li>
+    <li>Improve focus behaviour *</li>
     <li>Skip link</li>
   </ul>
+  <br aria-hidden="true" />
+  <p>
+    * Thanks to <ExternalLink
+      href="https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/"
+      name="Stephanie Eckles"
+    /> & <ExternalLink
+      href="https://codepen.io/argyleink/pen/JjEzeLp"
+      name="Adam Argyle"
+    />
+  </p>
 </div>
 
 <footer>
-  <p>&copy; 2023 Steve Frenzel (MIT License)</p>
+  <p>&copy; 2023 Steve Frenzel</p>
+  <p><span aria-hidden="true">⚖️</span> MIT License</p>
 </footer>
 
 <style>
@@ -339,8 +351,9 @@ import gitHub from "@images/github.svg";
     border-radius: var(--border-radius);
     font-size: var(--step-0);
     color: var(--color-yellow);
+    overflow: auto;
     padding: var(--space-s);
-    white-space: inherit;
+    white-space: nowrap;
   }
 
   code {
