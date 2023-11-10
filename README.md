@@ -1,8 +1,8 @@
-# Astronaut - Starter template for Astro
+# Astronaut
 
-Astronaut: "A person trained to pilot, navigate, or otherwise participate as a crew member of a spacecraft." [Source](https://www.thefreedictionary.com/astronaut)
+*This is a starter template for static site generator [Astro](https://astro.build/).*
 
-I'm a big fan of Astro, as it combines two things I really like: A component-based approach and zero client-side JavaScript! This template is pretty opinionated, as it's composed how I would set up my projects. But sharing is caring, so feel free to use it for your own projects or customise it. Here are all the features:
+I'm a big fan of Astro, as it combines two things I really like: A component-based approach and zero client-side JavaScript! This template is pretty opinionated, as it's composed how I would set up my projects. But sharing is caring, so feel free to use it for your own projects or customise it. After cloning it, run `npm install` to install all necessary dependencies. Here are all the features:
 
 ## Absolute imports
 
