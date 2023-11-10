@@ -9,15 +9,16 @@ import arrow from "@images/arrow-upward.svg";
 
 <style>
   a {
-    background: var(--color-accent-light);
+    background: var(--color-green);
     border-radius: var(--border-radius);
     bottom: var(--space-xs);
     position: fixed;
     right: var(--space-xs);
   }
-
-  img {
-    filter: invert(1);
+  @media (prefers-color-scheme: light) {
+    img {
+      filter: invert(1);
+    }
   }
 </style>
 

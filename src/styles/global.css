@@ -48,6 +48,8 @@
 
 body {
   background: var(--color-black);
+  background-attachment: fixed;
+  background-image: url("../images/nnnoise-dark.svg");
   color: var(--color-grey-light);
 }
 
@@ -92,6 +94,8 @@ code {
 @media (prefers-color-scheme: light) {
   body {
     background: var(--color-white);
+    background-attachment: fixed;
+    background-image: url("../images/nnnoise-light.svg");
     color: var(--color-black);
   }
 
@@ -105,14 +109,7 @@ code {
   }
 
   #back-to-top {
-    background: var(--color-blue);
-  }
-  #back-to-top img {
-    filter: invert(0);
-  }
-
-  .external-link {
-    color: purple !important;
+    background: var(--color-orange);
   }
 
   #skip-link:focus,
@@ -122,6 +119,18 @@ code {
   }
   #skip-link img {
     filter: invert(0);
+  }
+}
+
+@media (prefers-contrast: more) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+
+  h1,
+  h2 {
+    color: #fff;
   }
 }
 

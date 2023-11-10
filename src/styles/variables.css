@@ -2,13 +2,14 @@
   color-scheme: light dark;
 
   /* Color */
-  --color-accent-light: #e8c3f8;
+  --color-purple-light: #e8c3f8;
+  --color-purple-dark: purple;
   --color-black: #0c0e14;
-  --color-green: #2c6170;
+  --color-green: #2d6070;
   --color-grey-dark: #17191e;
   --color-grey-light: #bec0c8;
   --color-orange: #fe7d33;
-  --color-white: #fafafa;
+  --color-white: #f5f8fa;
   --color-yellow: #ffd493;
 
   /* Type */

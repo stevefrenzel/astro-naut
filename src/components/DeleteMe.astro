@@ -1,43 +1,30 @@
 ---
 import { Image } from "astro:assets";
 import ExternalLink from "@utils/ExternalLink.astro";
-import seo from "public/seo.png";
 import gitHub from "@images/github.svg";
+import logoDark from "@images/astronaut-logo-dark.svg";
+import logoLight from "@images/astronaut-logo-light.svg";
 ---
 
 <div class="wrapper">
   <header>
     <Image
       alt="Astronaut logo"
-      src={seo}
-      height={seo.height}
-      width={seo.width}
+      class="light"
+      src={logoLight}
+      height={logoLight.height}
+      width={logoLight.width}
       loading="eager"
     />
-
+    <Image
+      alt="Astronaut logo"
+      class="dark"
+      src={logoDark}
+      height={logoDark.height}
+      width={logoDark.width}
+      loading="eager"
+    />
     <h1 class="sr-only">Astronaut</h1>
-    <p>
-      <blockquote>
-        Astronaut: "A person trained to pilot, navigate, or otherwise
-        participate as a crew member of a spacecraft." <ExternalLink
-          href="https://www.thefreedictionary.com/astronaut"
-          name="Source"
-        />
-      </blockquote>
-    </p>
-    <br aria-hidden="true" />
-    <a
-      id="template-button"
-      href="https://github.com/stevefrenzel/astro-naut/generate/"
-      ><span> Use template</span>
-      <Image alt="GitHub logo" src={gitHub} height={60} width={60} />
-    </a>
-    <p id="template-text">
-      (Or check it out on <a href="https://github.com/stevefrenzel/astro-naut"
-        >GitHub</a
-      > first)
-    </p>
-    <br aria-hidden="true" />
     <p>
       This is a very opinionated starter template for the static site generator <ExternalLink
         href="https://astro.build/"
@@ -45,236 +32,253 @@ import gitHub from "@images/github.svg";
       />. I'm a big fan of Astro, as it combines two things I really like: A
       component-based approach and zero client-side JavaScript!
     </p>
-    <br aria-hidden="true" />
+    <div class="button-wrapper">
+      <a
+        id="template-button"
+        href="https://github.com/stevefrenzel/astro-naut/generate/"
+        ><span> Use template</span>
+        <Image alt="GitHub logo" src={gitHub} height={60} width={60} />
+      </a>
+      <p id="template-text">
+        (Or check it out on <ExternalLink
+          href="https://github.com/stevefrenzel/astro-naut"
+          name="GitHub"
+        /> first)
+      </p>
+    </div>
     <p>
       This is how I like to set up my projects, but sharing is caring, so:
       Please use it for your own projects and customise it. Here are all the
       features:
     </p>
   </header>
+
   <main id="main">
-    <h2>Table of contents</h2>
-    <ul id="table-of-contents" role="list">
-      <li>
-        <a href="#imports">Absolute Imports</a>
-        <span aria-hidden="true"> 📥</span>
-      </li>
-      <li><a href="#reset">CSS Reset</a><span aria-hidden="true"> 💥</span></li>
-      <li>
-        <a href="#fonts">Custom Fonts</a><span aria-hidden="true"> 🔤</span>
-      </li>
-      <li>
-        <a href="#utopia">Fluid Responsive Design</a><span aria-hidden="true">
-          🌊</span
-        >
-      </li>
-      <li>
-        <a href="#preference">Preference Detection</a><span aria-hidden="true"
-        ></span>
-         👀
-      </li>
-      <li>
-        <a href="#hooks">Pre-Commit Hooks</a><span aria-hidden="true"> 🐶</span>
-      </li>
-      <li>
-        <a href="#prettier">Prettier Config</a><span aria-hidden="true">
-          💅</span
-        >
-      </li>
-      <li><a href="#seo">SEO</a><span aria-hidden="true"> 🔍</span></li>
-      <li>
-        <a href="#security">Security Headers</a><span aria-hidden="true">
-          🔒</span
-        >
-      </li>
-      <li>
-        <a href="#usability">Usability</a><span aria-hidden="true"> 🌐</span>
-      </li>
-    </ul>
-  </main>
+    <section aria-label="Table of contents">
+      <h2>Table of contents</h2>
+      <ul id="table-of-contents" role="list">
+        <li>
+          <a href="#imports">Absolute Imports</a>
+          <span aria-hidden="true"> 📥</span>
+        </li>
+        <li>
+          <a href="#reset">CSS Reset</a><span aria-hidden="true"> 💥</span>
+        </li>
+        <li>
+          <a href="#fonts">Custom Fonts</a><span aria-hidden="true"> 🔤</span>
+        </li>
+        <li>
+          <a href="#utopia">Fluid Responsive Design</a><span aria-hidden="true">
+            🌊</span
+          >
+        </li>
+        <li>
+          <a href="#preference">Preference Detection</a><span aria-hidden="true"
+          ></span>
+           👀
+        </li>
+        <li>
+          <a href="#hooks">Pre-Commit Hooks</a><span aria-hidden="true">
+            🐶</span
+          >
+        </li>
+        <li>
+          <a href="#prettier">Prettier Config</a><span aria-hidden="true">
+            💅</span
+          >
+        </li>
+        <li><a href="#seo">SEO</a><span aria-hidden="true"> 🔍</span></li>
+        <li>
+          <a href="#security">Security Headers</a><span aria-hidden="true">
+            🔒</span
+          >
+        </li>
+        <li>
+          <a href="#usability">Usability</a><span aria-hidden="true"> 🌐</span>
+        </li>
+      </ul>
+    </section>
 
-  <div class="spacer"></div>
-
-  <h2 id="imports">Absolute Imports <span aria-hidden="true">📥</span></h2>
-  <p>Tired of your imports looking like this?</p>
-  <pre>
+    <section aria-label="Absolute Imports">
+      <h2 id="imports">Absolute Imports <span aria-hidden="true">📥</span></h2>
+      <p>Tired of your imports looking like this?</p>
+      <pre>
         <code class="code-block">
           import Layout from "../../../../../layouts/Layout.astro";
         </code>
       </pre>
-  <p>
-    Me too, which is why I'm using absolute imports to make it look nice and
-    clean:
-  </p>
-  <pre>
+      <p>
+        Me too, which is why I'm using absolute imports to make it look nice and
+        clean:
+      </p>
+      <pre>
         <code class="code-block">
           import Layout from "@layouts/Layout.astro";
         </code>
       </pre>
+    </section>
 
-  <div class="spacer"></div>
+    <section aria-label="CSS Reset">
+      <h2 id="reset">CSS Reset <span aria-hidden="true">💥</span></h2>
+      <p>
+        I never start a project without Andy Bell's <ExternalLink
+          href="https://andy-bell.co.uk/a-more-modern-css-reset/"
+          name="(more) modern CSS reset"
+        />! It lays the foundation for what I'm about to do with Utopia's fluid
+        responsive design.
+      </p>
+    </section>
 
-  <h2 id="reset">CSS Reset <span aria-hidden="true">💥</span></h2>
-  <p>
-    I never start a project without Andy Bell's <ExternalLink
-      href="https://andy-bell.co.uk/a-more-modern-css-reset/"
-      name="(more) modern CSS reset"
-    />! It lays the foundation for what I'm about to do with Utopia's fluid
-    responsive design.
-  </p>
+    <section aria-label="Custom Fonts">
+      <h2 id="fonts">Custom Fonts <span aria-hidden="true">🔤</span></h2>
+      <p>
+        Using system fonts is a safe and performant way to add some identity to
+        your typography, but let's be honest: They're overused and quite boring.
+        Which is why I like to use custom fonts, usually one for headlines and
+        one for body text. You can of course always change them to Lobster or
+        Papyrus, I won't judge.
+      </p>
+    </section>
 
-  <div class="spacer"></div>
+    <section aria-label="Fluid Responsive Design">
+      <h2 id="utopia">
+        Fluid Responsive Design <span aria-hidden="true">🌊</span>
+      </h2>
+      <p>
+        I need you to sit down for this one. You don't really need breakpoints
+        to define your layout for mobile, tablet and desktop devices. How could
+        you even anticipate what device will be used to gaze upon your beautiful
+        website?
+      </p>
+      <p>
+        Wouldn't make it more sense if you had a fluid, yet robust design which
+        works for all viewports? Which requires less code and no <code
+          >breakpoints.css</code
+        >
+         nearing 1000 lines of code? Let me introduce you to <ExternalLink
+          href="https://utopia.fyi/"
+          name="Utopia"
+        />, which is used to generate adaptive font sizes and spacing.
+      </p>
+      <p>
+        You should also check out <ExternalLink
+          href="https://viewports.fyi/"
+          name="viewports.fyi"
+        /> for a deep-dive into this topic. And while you're at it, have a look
+        at
+        <ExternalLink
+          href="https://buildexcellentwebsit.es/"
+          name="buildexcellentwebsit.es"
+        /> as well.
+      </p>
+    </section>
 
-  <h2 id="fonts">Custom Fonts <span aria-hidden="true">🔤</span></h2>
-  <p>
-    Using system fonts is a safe and performant way to add some identity to your
-    typography, but let's be honest: They're overused and quite boring. Which is
-    why I like to use custom fonts, usually one for headlines and one for body
-    text. You can of course always change them to Lobster or Papyrus, I won't
-    judge.
-  </p>
+    <section aria-label="Preference Detection">
+      <h2 id="preference">
+        Preference Detection <span aria-hidden="true">👀</span>
+      </h2>
+      <p>
+        This template automatically changes the theme based on your operating
+        settings by utilising <ExternalLink
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
+          name="prefers-color-scheme"
+        /> and <ExternalLink
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast"
+          name="prefers-contrast"
+        />. It also checks if you prefer reduced motions via
+        <ExternalLink
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+          name="prefers-reduced-motion"
+        />. Look and behold, the power of CSS!
+      </p>
+    </section>
 
-  <div class="spacer"></div>
+    <section aria-label="Pre-Commit Hooks">
+      <h2 id="hooks">Pre-Commit Hooks <span aria-hidden="true">🐶</span></h2>
+      <p>
+        Commiting to something can sometimes take a lot of effort. Commiting
+        code is no exception, but at least here we can pull out the safety net
+        to soften our fall in case we made a mistake. In this case it's running
+        <code>astro check</code> (powered by <ExternalLink
+          href="https://typicode.github.io/husky/"
+          name="Husky"
+        />), which will look for the following things in your project BEFORE
+        your code is being commited:
+      </p>
+      <ul id="hooks-list" role="list">
+        <li>Errors <span aria-hidden="true">🚨</span></li>
+        <li>Warnings <span aria-hidden="true">⚠️</span></li>
+        <li>Hints <span aria-hidden="true">💡</span></li>
+      </ul>
+    </section>
 
-  <h2 id="utopia">
-    Fluid Responsive Design <span aria-hidden="true">🌊</span>
-  </h2>
-  <p>
-    I need you to sit down for this one. You don't really need breakpoints to
-    define your layout for mobile, tablet and desktop devices. How could you
-    even anticipate what device will be used to gaze upon your beautiful
-    website?
-  </p>
-  <br aria-hidden="true" />
-  <p>
-    Wouldn't make it more sense if you had a fluid, yet robust design which
-    works for all viewports? Which requires less code and no <code
-      >breakpoints.css</code
-    >
-     nearing 1000 lines of code? Let me introduce you to <ExternalLink
-      href="https://utopia.fyi/"
-      name="Utopia"
-    />, which is used to generate adaptive font sizes and spacing.
-  </p>
-  <br aria-hidden="true" />
-  <p>
-    You should also check out <ExternalLink
-      href="https://viewports.fyi/"
-      name="viewports.fyi"
-    /> for a deep-dive into this topic. And while you're at it, have a look at
+    <section aria-label="Prettier Config">
+      <h2 id="prettier">Prettier Config <span aria-hidden="true">💅</span></h2>
+      <p>
+        I don't know about you, but if my code is not nicely formatted after
+        hitting save, I'm starting to feel very weird. Which is why this comes
+        with a Prettier configuration, in case you're using it. Or a you one of
+        those people who do this manually?!
+      </p>
+    </section>
 
-    <ExternalLink
-      href="https://buildexcellentwebsit.es/"
-      name="buildexcellentwebsit.es"
-    /> as well.
-  </p>
+    <section aria-label="">
+      <h2 id="seo">SEO <span aria-hidden="true">🔍</span></h2>
+      <p>
+        Predefined values for improved search engine optimisation can be found
+        in
+        <code>Layout.astro</code>. These settings have been my reliable
+        companion for a couple of years now and I put a lot of research, work
+        and testing into it.
+      </p>
+    </section>
 
-  <div class="spacer"></div>
+    <section aria-label="Security Headers">
+      <h2 id="security">Security Headers <span aria-hidden="true">🔒</span></h2>
+      <p>
+        Better safe than sorry, am I right? There are multiple ways to add
+        security headers to your website and I decided to store them in a
+        <code>vercel.json</code> file, cause this website was deployed to (you
+        guessed it) <ExternalLink href="https://vercel.com/" name="Vercel" />.
+        It contains the following headers, feel free to adjust them to your
+        needs:
+      </p>
+      <ul role="list">
+        <li>Content-Security-Policy</li>
+        <li>X-Frame-Options</li>
+        <li>X-Content-Type-Options</li>
+        <li>Referrer-Policy</li>
+        <li>Permissions-Policy</li>
+      </ul>
+    </section>
 
-  <h2 id="preference">
-    Preference Detection <span aria-hidden="true">👀</span>
-  </h2>
-  <p>
-    This template automatically changes the theme based on your operating
-    settings by utilising <ExternalLink
-      href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
-      name="prefers-color-scheme"
-    />. It also checks if you prefer reduced motions via
-    <ExternalLink
-      href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
-      name="prefers-reduced-motion"
-    />. Look and behold, the power of CSS!
-  </p>
-
-  <div class="spacer"></div>
-
-  <h2 id="hooks">Pre-Commit Hooks <span aria-hidden="true">🐶</span></h2>
-  <p>
-    Commiting to something can sometimes take a lot of effort. Commiting code is
-    no exception, but at least here we can pull out the safety net to soften our
-    fall in case we made a mistake. In this case it's running
-    <code>astro check</code> (powered by <ExternalLink
-      href="https://typicode.github.io/husky/"
-      name="Husky"
-    />), which will look for the following things in your project BEFORE your
-    code is being commited:
-  </p>
-  <br aria-hidden="true" />
-
-  <ul id="hooks-list" role="list">
-    <li>Errors <span aria-hidden="true">🚨</span></li>
-    <li>Warnings <span aria-hidden="true">⚠️</span></li>
-    <li>Hints <span aria-hidden="true">💡</span></li>
-  </ul>
-
-  <div class="spacer"></div>
-
-  <h2 id="prettier">Prettier Config <span aria-hidden="true">💅</span></h2>
-  <p>
-    I don't know about you, but if my code is not nicely formatted after hitting
-    save, I'm starting to feel very weird. Which is why this comes with a
-    Prettier configuration, in case you're using it. Or a you one of those
-    people who do this manually?!
-  </p>
-
-  <div class="spacer"></div>
-
-  <h2 id="seo">SEO <span aria-hidden="true">🔍</span></h2>
-  <p>
-    Predefined values for improved search engine optimisation can be found in
-    <code>Layout.astro</code>. These settings have been my reliable companion
-    for a couple of years now and I put a lot of research, work and testing into
-    it.
-  </p>
-
-  <div class="spacer"></div>
-
-  <h2 id="security">Security Headers <span aria-hidden="true">🔒</span></h2>
-  <p>
-    Better safe than sorry, am I right? There are multiple ways to add security
-    headers to your website and I decided to store them in a
-    <code>vercel.json</code> file, cause this website was deployed to (you
-    guessed it) <ExternalLink href="https://vercel.com/" name="Vercel" />. It
-    contains the following headers, feel free to adjust them to your needs:
-  </p>
-  <br aria-hidden="true" />
-  <ul role="list">
-    <li>Content-Security-Policy</li>
-    <li>X-Frame-Options</li>
-    <li>X-Content-Type-Options</li>
-    <li>Referrer-Policy</li>
-    <li>Permissions-Policy</li>
-  </ul>
-
-  <div class="spacer"></div>
-
-  <h2 id="usability">Usability <span aria-hidden="true">🌐</span></h2>
-  <p>
-    I've added a bunch of handy utilities which will not only improve usability,
-    but accessibility as well:
-  </p>
-  <br aria-hidden="true" />
-  <ul role="list">
-    <li>"Back to top" button</li>
-    <li>External link (showing icon)</li>
-    <li>Improve focus behaviour *</li>
-    <li>Skip link</li>
-  </ul>
-  <br aria-hidden="true" />
-  <p>
-    * Thanks to <ExternalLink
-      href="https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/"
-      name="Stephanie Eckles"
-    /> & <ExternalLink
-      href="https://codepen.io/argyleink/pen/JjEzeLp"
-      name="Adam Argyle"
-    />
-  </p>
+    <section aria-label="Usability">
+      <h2 id="usability">Usability <span aria-hidden="true">🌐</span></h2>
+      <p>
+        I've added a bunch of handy utilities which will not only improve
+        usability, but accessibility as well:
+      </p>
+      <ul role="list">
+        <li>"Back to top" button</li>
+        <li>External link (showing icon)</li>
+        <li>Improved focus behaviour *</li>
+        <li>Skip link</li>
+      </ul>
+      <p class="smol">
+        * Thanks to <ExternalLink
+          href="https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/"
+          name="Stephanie Eckles"
+        /> & <ExternalLink
+          href="https://codepen.io/argyleink/pen/JjEzeLp"
+          name="Adam Argyle"
+        />
+      </p>
+    </section>
+  </main>
 </div>
 
 <footer>
-  <p>&copy; 2023 Steve Frenzel</p>
-  <p><span aria-hidden="true">⚖️</span> MIT License</p>
+  <p>&copy; 2023 Steve Frenzel (MIT License)</p>
 </footer>
 
 <style>
@@ -289,16 +293,20 @@ import gitHub from "@images/github.svg";
     margin: var(--space-l) 0;
   }
 
-  .spacer {
+  section {
     margin: var(--space-2xl) 0;
+  }
+
+  .button-wrapper {
+    margin: var(--space-xl) 0;
   }
 
   #template-button {
     align-items: center;
-    background: purple;
+    background: var(--color-green);
     border-radius: var(--border-radius);
-    box-shadow: 0px 0px 30px 0px purple;
-    color: white;
+    box-shadow: 0px 0px 30px 0px var(--color-green);
+    color: var(--color-white);
     display: flex;
     flex-wrap: wrap;
     font-size: var(--step-2);
@@ -332,17 +340,16 @@ import gitHub from "@images/github.svg";
     content: " ↪";
   }
 
-  blockquote {
-    font-style: italic;
-    margin: 0;
-  }
-
   h2 {
     margin-bottom: var(--space-xs);
   }
 
   p {
     margin: 0;
+  }
+
+  p + p {
+    margin-top: var(--space-s);
   }
 
   pre {
@@ -364,9 +371,12 @@ import gitHub from "@images/github.svg";
     color: var(--color-yellow) !important;
   }
 
-  ul,
   li {
     margin: 0;
+  }
+
+  .smol {
+    font-size: var(--step-0);
   }
 
   footer {
@@ -380,19 +390,35 @@ import gitHub from "@images/github.svg";
     font-size: var(--step-0);
   }
 
-  .dark {
+  .light {
     display: none;
   }
-  .light {
+  .dark {
     display: initial;
   }
 
   @media (prefers-color-scheme: light) {
-    .dark {
+    .light {
       display: initial;
     }
-    .light {
+    .dark {
       display: none;
+    }
+    #template-button {
+      background: var(--color-orange);
+      box-shadow: 0px 0px 30px 0px var(--color-orange);
+      color: var(--color-black);
+    }
+    #template-button img {
+      filter: invert(1);
+    }
+  }
+
+  @media (prefers-contrast: more) {
+    #template-button {
+      background: darkgreen;
+      box-shadow: 0px 0px 30px 0px darkgreen;
+      color: #fff;
     }
   }
 </style>
