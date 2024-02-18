@@ -30,23 +30,23 @@ Using system fonts is a safe and performant way to add some identity to your typ
 
 I need you to sit down for this one. You don't really need breakpoints to define your layout for mobile, tablet and desktop devices. How could you even anticipate what device will be used to gaze upon your beautiful website?
 
-Wouldn't make it more sense if you had a fluid, yet robust design which works for all viewports? Which requires less code and no `breakpoints.css` nearing 1000 lines of code? Let me introduce you to [Utopia](https://utopia.fyi/), which is used to generate adaptive font sizes and spacing.
+Wouldn't make it more sense if you had a fluid, yet robust design which works for every viewport? Which requires less code and no `breakpoints.css` nearing 1000 lines of code? Let me introduce you to [Utopia](https://utopia.fyi/), which is used to generate adaptive font sizes and spacing.
 
 You should also check out [The ideal viewport doesn’t exist](https://viewports.fyi/) for a deep-dive into this topic. And while you're at it, have a look at [Be the browser’s mentor, not its micromanager.](https://buildexcellentwebsit.es/) as well.
 
 ## Pre-commit hooks
 
-Committing to something can sometimes take a lot of effort. Committing code is no exception, but at least here we can pull out the safety net to soften our fall in case we made a mistake. When pushing your changes, it's running `npm run build`, which will look for the following things in your project before building it:
+Committing to something can sometimes take a lot of effort. Committing code is no exception, but at least here we can pull out the safety net to soften our fall in case we made a mistake. When committing your changes, it's running `npm run build`, which will look for the following things in your project before building it:
 
 - Errors
 - Warnings
 - Hints
 
-When your pipeline is free of errors AND the build was successful, it'll push your changes. You're welcome. 🤗
+When your pipeline is free of errors AND the build was successful, it'll commit your changes. You're welcome. 🤗
 
 ## Preference detection
 
-This template automatically changes the theme based on your operating settings by utilising `prefers-color-scheme`. It also checks if you prefer reduced motion via `prefers-reduced-motion`. Look and behold, the power of CSS!
+This template automatically changes the theme based on your operating settings by utilizing `prefers-color-scheme`. It also checks if you prefer reduced motion via `prefers-reduced-motion`. Look and behold, the power of CSS!
 
 ## Prettier
 
