@@ -1,6 +1,6 @@
 # Astronaut
 
-*This is a starter template for static site generator [Astro](https://astro.build/).*
+_This is a starter template for static site generator [Astro](https://astro.build/)._
 
 I'm a big fan of Astro, as it combines two things I really like: A component-based approach and zero client-side JavaScript! This template is pretty opinionated, as it's composed how I would set up my projects. But sharing is caring, so feel free to use it for your own projects or customise it. After cloning it, run `npm install` to install all necessary dependencies. Here are all the features:
 
@@ -36,11 +36,13 @@ You should also check out [The ideal viewport doesn’t exist](https://viewports
 
 ## Pre-commit hooks
 
-Commiting to something can sometimes take a lot of effort. Commiting code is no exception, but at least here we can pull out the safety net to soften our fall in case we made a mistake. In this case it's running `astro check`, which will look for the following things in your project:
+Committing to something can sometimes take a lot of effort. Committing code is no exception, but at least here we can pull out the safety net to soften our fall in case we made a mistake. When pushing your changes, it's running `npm run build`, which will look for the following things in your project before building it:
 
 - Errors
 - Warnings
 - Hints
+
+When your pipeline is free of errors AND the build was successful, it'll push your changes. You're welcome. 🤗
 
 ## Preference detection
 
