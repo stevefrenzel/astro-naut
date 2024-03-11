@@ -75,7 +75,7 @@ import logoLight from "@images/astronaut-logo-light.svg";
         <li>
           <a href="#preference">Preference Detection</a><span aria-hidden="true"
           ></span>
-           👀
+          👀
         </li>
         <li>
           <a href="#hooks">Pre-Commit Hooks</a><span aria-hidden="true">
@@ -155,7 +155,7 @@ import logoLight from "@images/astronaut-logo-light.svg";
         works for all viewports? Which requires less code and no <code
           >breakpoints.css</code
         >
-         nearing 1000 lines of code? Let me introduce you to <ExternalLink
+        nearing 1000 lines of code? Let me introduce you to <ExternalLink
           href="https://utopia.fyi/"
           name="Utopia"
         />, which is used to generate adaptive font sizes and spacing.
@@ -164,8 +164,7 @@ import logoLight from "@images/astronaut-logo-light.svg";
         You should also check out <ExternalLink
           href="https://viewports.fyi/"
           name="viewports.fyi"
-        /> for a deep-dive into this topic. And while you're at it, have a look
-        at
+        /> for a deep-dive into this topic. And while you're at it, have a look at
         <ExternalLink
           href="https://buildexcellentwebsit.es/"
           name="buildexcellentwebsit.es"
@@ -199,11 +198,11 @@ import logoLight from "@images/astronaut-logo-light.svg";
         Commiting to something can sometimes take a lot of effort. Commiting
         code is no exception, but at least here we can pull out the safety net
         to soften our fall in case we made a mistake. In this case it's running
-        <code>astro check</code> (powered by <ExternalLink
+        <code>npm run build</code> (powered by <ExternalLink
           href="https://typicode.github.io/husky/"
           name="Husky"
-        />), which will look for the following things in your project BEFORE
-        your code is being commited:
+        />), which will look for the following things in your project BEFORE the
+        project is build and BEFORE your code is being commited:
       </p>
       <ul id="hooks-list" role="list">
         <li>Errors <span aria-hidden="true">🚨</span></li>
@@ -238,10 +237,9 @@ import logoLight from "@images/astronaut-logo-light.svg";
       <p>
         Better safe than sorry, am I right? There are multiple ways to add
         security headers to your website and I decided to store them in a
-        <code>vercel.json</code> file, cause this website was deployed to (you
-        guessed it) <ExternalLink href="https://vercel.com/" name="Vercel" />.
-        It contains the following headers, feel free to adjust them to your
-        needs:
+        <code>vercel.json</code> file, cause this website was deployed to (you guessed
+        it) <ExternalLink href="https://vercel.com/" name="Vercel" />. It
+        contains the following headers, feel free to adjust them to your needs:
       </p>
       <ul role="list">
         <li>Content-Security-Policy</li>
