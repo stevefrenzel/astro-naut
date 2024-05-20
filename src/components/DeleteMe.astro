@@ -4,6 +4,8 @@ import ExternalLink from "@utils/ExternalLink.astro";
 import gitHub from "@images/github.svg";
 import logoDark from "@images/astronaut-logo-dark.svg";
 import logoLight from "@images/astronaut-logo-light.svg";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <div class="wrapper">
@@ -276,7 +278,7 @@ import logoLight from "@images/astronaut-logo-light.svg";
 </div>
 
 <footer>
-  <p>&copy; 2023 Steve Frenzel (MIT License)</p>
+  <p>&copy; {currentYear} Steve Frenzel (MIT License)</p>
 </footer>
 
 <style>
