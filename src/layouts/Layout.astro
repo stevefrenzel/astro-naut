@@ -2,6 +2,8 @@
 import "@styles/reset.css";
 import "@styles/global.css";
 import "@styles/variables.css";
+import { join } from "node:path";
+import { AstroFont } from "astro-font";
 
 export interface Props {
   title: string;
@@ -50,6 +52,38 @@ const socialImageURL = new URL("/seo.png", Astro.url);
     <meta name="twitter:description" content={metaData.description} />
     <meta name="twitter:image" content={socialImageURL} />
     <meta name="twitter:image:alt" content={title} />
+    <AstroFont
+      config={[
+        {
+          name: "Anybody",
+          src: [
+            {
+              style: 'normal',
+              weight: '400',
+              path: join(process.cwd(), "public", "fonts", "anybody-v11-latin-regular.woff2")
+            },
+          ],
+          preload: false,
+          display: "swap",
+          fallback: "sans-serif",
+          cssVariable: "font-anybody",
+        },
+        {
+          name: "Inter",
+          src: [
+            {
+              style: 'normal',
+              weight: '400',
+              path: join(process.cwd(), "public", "fonts", "inter-v13-latin-regular.woff2")
+            },
+          ],
+          preload: false,
+          display: "swap",
+          fallback: "sans-serif",
+          cssVariable: "font-inter",
+        },
+      ]}
+    />
   </head>
   <body>
     <slot />

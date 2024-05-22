@@ -13,9 +13,11 @@
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "astro": "^4.0.3",
+    "astro-font": "^0.0.81",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@types/node": "^20.12.12",
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.1"
