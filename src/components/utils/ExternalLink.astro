@@ -1,15 +1,21 @@
 ---
 export interface Props {
-  href: string;
   fontSize?: string;
+  href: string;
+  iconSize?: string;
   name: string;
 }
 
-const { href, fontSize, name } = Astro.props;
+const { fontSize, href, iconSize = "24px", name } = Astro.props;
 ---
 
-<a href={href} class="external-link" rel="noopener noreferrer"
-  >{name}
+<a
+  aria-label={`${name} (external link)`}
+  class="external-link"
+  href={href}
+  rel="noopener noreferrer"
+>
+  {name}
   <svg
     width="24"
     height="24"
@@ -29,7 +35,7 @@ const { href, fontSize, name } = Astro.props;
   </svg>
 </a>
 
-<style define:vars={{ fontSize }}>
+<style define:vars={{ fontSize, iconSize }}>
   a {
     align-items: center;
     color: var(--color-purple-light);
@@ -37,6 +43,11 @@ const { href, fontSize, name } = Astro.props;
     font-size: var(--fontSize);
     gap: var(--space-3xs);
     width: fit-content;
+  }
+
+  svg {
+    height: var(--iconSize);
+    width: var(--iconSize);
   }
 
   .dark {

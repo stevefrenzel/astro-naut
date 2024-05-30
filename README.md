@@ -70,7 +70,13 @@ Better safe than sorry, am I right? There are multiple ways to add security head
 
 I've added a bunch of handy utilities which will not only improve usability, but accessibility as well. Here's a list of them:
 
-- "Back to top" button
-- External link (showing icon)
-- Improved focus behaviour (thanks to [Stephanie Eckles](https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/) & [Adam Argyle](https://codepen.io/argyleink/pen/JjEzeLp))
-- Skip link
+1. "Back to top" button
+2. External link (showing icon)
+3. Improved focus behaviour (thanks to [Stephanie Eckles](https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/) & [Adam Argyle](https://codepen.io/argyleink/pen/JjEzeLp))
+4. Skip link
+
+Very proud of the the `ExternalLink.astro` component, as it handles a couple of use cases:
+
+- `aria-label` info for external link
+- Adjustable font and icon size
+- Lets you configure the `rel` attribute

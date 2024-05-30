@@ -69,6 +69,7 @@ h2 {
 a,
 blockquote,
 ul,
+ol,
 p {
   font-family: "Inter", sans-serif;
   font-size: var(--step-1);

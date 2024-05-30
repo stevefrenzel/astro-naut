@@ -58,7 +58,7 @@ const currentYear = new Date().getFullYear();
   <main id="main">
     <section aria-label="Table of contents">
       <h2>Table of contents</h2>
-      <ul id="table-of-contents" role="list">
+      <ul id="table-of-contents">
         <li>
           <a href="#imports">Absolute Imports</a>
           <span aria-hidden="true"> 📥</span>
@@ -206,7 +206,7 @@ const currentYear = new Date().getFullYear();
         />), which will look for the following things in your project BEFORE the
         project is build and BEFORE your code is being commited:
       </p>
-      <ul id="hooks-list" role="list">
+      <ul id="hooks-list">
         <li>Errors <span aria-hidden="true">🚨</span></li>
         <li>Warnings <span aria-hidden="true">⚠️</span></li>
         <li>Hints <span aria-hidden="true">💡</span></li>
@@ -243,7 +243,7 @@ const currentYear = new Date().getFullYear();
         it) <ExternalLink href="https://vercel.com/" name="Vercel" />. It
         contains the following headers, feel free to adjust them to your needs:
       </p>
-      <ul role="list">
+      <ul>
         <li>Content-Security-Policy</li>
         <li>X-Frame-Options</li>
         <li>X-Content-Type-Options</li>
@@ -258,18 +258,29 @@ const currentYear = new Date().getFullYear();
         I've added a bunch of handy utilities which will not only improve
         usability, but accessibility as well:
       </p>
-      <ul role="list">
+      <ol>
         <li>"Back to top" button</li>
         <li>External link (showing icon)</li>
         <li>Improved focus behaviour *</li>
         <li>Skip link</li>
+      </ol>
+      <p>
+        Very proud of the the <code>ExternalLink.astro</code> component, as it handles
+        a couple of use cases:
+      </p>
+      <ul>
+        <li><code>aira-label</code> info for external link</li>
+        <li>Adjustable font and icon size</li>
+        <li>Lets you configure the <code>rel</code> attribute</li>
       </ul>
       <p class="smol">
         * Thanks to <ExternalLink
           href="https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/"
+          iconSize="18px"
           name="Stephanie Eckles"
         /> & <ExternalLink
           href="https://codepen.io/argyleink/pen/JjEzeLp"
+          iconSize="18px"
           name="Adam Argyle"
         />
       </p>
