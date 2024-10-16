@@ -2,7 +2,7 @@
 
 _This is a starter template for static site generator [Astro](https://astro.build/)._
 
-I'm a big fan of Astro, as it combines two things I really like: A component-based approach and zero client-side JavaScript! This template is pretty opinionated, as it's composed how I would set up my projects. But sharing is caring, so feel free to use it for your own projects or customise it. After cloning it, run `npm install` to install all necessary dependencies. Here are all the features:
+I'm a big fan of Astro, as it combines two things I really like: A component-based approach and zero client-side JavaScript! This template is pretty opinionated, as it's composed how I would set up my projects. But sharing is caring, so feel free to use it for your own projects or customise it. After cloning it, run `npm install` to install all necessary dependencies and then `npm start` to start your local dev server. Here are all the features:
 
 ## Absolute imports
 

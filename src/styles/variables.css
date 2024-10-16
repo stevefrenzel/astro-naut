@@ -12,7 +12,7 @@
   --color-white: #f5f8fa;
   --color-yellow: #ffd493;
 
-  /* Type */
+  /* Typography */
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
   --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -22,7 +22,7 @@
   --step-4: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
   --step-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
 
-  /* Space */
+  /* Spacing */
   --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
   --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
   --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
