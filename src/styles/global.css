@@ -1,19 +1,19 @@
 /* Typography */
 
 @font-face {
-  font-display: optional;
+  font-display: swap;
   font-family: "Anybody";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/anybody-v11-latin-regular.woff2") format("woff2");
+  src: url("/fonts/anybody-v11-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-display: optional;
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/inter-v13-latin-regular.woff2") format("woff2");
+  src: url("/fonts/inter-v13-latin-regular.woff2") format("woff2");
 }
 
 /* Focus behaviour */
