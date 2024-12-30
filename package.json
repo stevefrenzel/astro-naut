@@ -1,23 +1,23 @@
 {
   "name": "astronaut",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "astro": "^4.0.3",
-    "typescript": "^5.2.2"
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.1.1",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.1"
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
