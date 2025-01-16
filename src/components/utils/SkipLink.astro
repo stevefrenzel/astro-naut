@@ -15,14 +15,18 @@ import arrow from "@images/arrow-upward.svg";
 <style>
   a {
     align-items: center;
-    background: var(--color-purple-light);
+    background: light-dark(var(--color-purple-dark), var(--color-purple-light));
     border-radius: var(--border-radius);
-    color: var(--color-black);
+    color: light-dark(var(--color-white), var(--color-black));
     display: flex;
     height: 1px;
     left: -9999px;
     padding: var(--space-xs);
     position: absolute;
+    outline-color: light-dark(
+      var(--color-purple-dark),
+      var(--color-purple-light)
+    );
     overflow: hidden;
     top: auto;
     width: 1px;
@@ -42,5 +46,11 @@ import arrow from "@images/arrow-upward.svg";
     margin-left: var(--space-xs);
     transform: rotate(180deg);
     filter: invert(1);
+  }
+
+  @media (prefers-color-scheme: light) {
+    img {
+      filter: invert(0);
+    }
   }
 </style>

@@ -1,146 +1,125 @@
-/* Typography */
+@layer reset, variables, global, custom;
 
-@font-face {
-  font-display: swap;
-  font-family: "Anybody";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/anybody-v11-latin-regular.woff2") format("woff2");
-}
+@layer global {
+  /* Typography */
 
-@font-face {
-  font-display: swap;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/inter-v13-latin-regular.woff2") format("woff2");
-}
+  @font-face {
+    font-display: swap;
+    font-family: "Anybody";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/anybody-v11-latin-regular.woff2") format("woff2");
+  }
 
-/* Focus behaviour */
+  @font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/inter-v13-latin-regular.woff2") format("woff2");
+  }
 
-:is(a, button, input, textarea, summary) {
-  --outline-size: max(2px, 0.08em);
-  --outline-style: solid;
-  --outline-color: currentColor;
-  --outline-offset: 3px;
-}
+  /* Focus behaviour */
 
-:is(a, button, input, textarea, summary):focus {
-  outline: var(--outline-size) var(--outline-style) var(--outline-color);
-  outline-offset: var(--outline-offset, var(--outline-size));
-}
+  :is(a, button, input, textarea, summary) {
+    --outline-size: max(2px, 0.08em);
+    --outline-style: solid;
+    --outline-color: currentColor;
+    --outline-offset: 3px;
+  }
 
-:is(a, button, input, textarea, summary):focus-visible {
-  outline: var(--outline-size) var(--outline-style) var(--outline-color);
-  outline-offset: var(--outline-offset, var(--outline-size));
-}
+  :is(a, button, input, textarea, summary):focus {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
 
-:is(a, button, input, textarea, summary):focus:not(:focus-visible) {
-  outline: none;
-}
+  :is(a, button, input, textarea, summary):focus-visible {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
 
-:is(a, button, input, textarea, summary):hover {
-  outline: var(--outline-size) var(--outline-style) var(--outline-color);
-  outline-offset: var(--outline-offset, var(--outline-size));
-}
+  :is(a, button, input, textarea, summary):focus:not(:focus-visible) {
+    outline: none;
+  }
 
-/* General */
+  :is(a, button, input, textarea, summary):hover {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
 
-body {
-  background: var(--color-black);
-  background-attachment: fixed;
-  background-image: url("../images/nnnoise-dark.svg");
-  color: var(--color-grey-light);
-}
+  /* General */
 
-h1,
-h2 {
-  color: var(--color-white);
-  font-family: "Anybody", sans-serif;
-}
-
-h1 {
-  font-size: var(--step-5);
-}
-h2 {
-  font-size: var(--step-4);
-}
-
-a,
-blockquote,
-ul,
-ol,
-p {
-  font-family: "Inter", sans-serif;
-  font-size: var(--step-1);
-  hyphens: auto;
-}
-
-code {
-  color: var(--color-yellow);
-  font-weight: bold;
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* Scheme preference */
-
-@media (prefers-color-scheme: light) {
   body {
-    background: var(--color-white);
+    background: light-dark(var(--color-white), var(--color-black));
     background-attachment: fixed;
-    background-image: url("../images/nnnoise-light.svg");
-    color: var(--color-black);
+    background-image: url("../images/nnnoise-dark.svg");
+    color: light-dark(var(--color-black), var(--color-grey-light));
   }
 
   h1,
   h2 {
-    color: var(--color-black);
+    color: light-dark(var(--color-black), var(--color-white));
+    font-family: "Anybody", sans-serif;
+  }
+
+  h1 {
+    font-size: var(--step-5);
+  }
+  h2 {
+    font-size: var(--step-4);
+  }
+
+  a,
+  blockquote,
+  ul,
+  ol,
+  p {
+    font-family: "Inter", sans-serif;
+    font-size: var(--step-1);
+    hyphens: auto;
   }
 
   code {
-    color: var(--color-green);
+    color: light-dark(var(--color-green), var(--color-yellow));
+    font-weight: bold;
   }
 
-  #back-to-top {
-    background: var(--color-orange);
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 
-  #skip-link:focus,
-  #skip-link:focus-visible {
-    background: var(--color-blue);
-    color: var(--color-white);
-  }
-  #skip-link img {
-    filter: invert(0);
-  }
-}
+  /* Scheme preference */
 
-@media (prefers-contrast: more) {
-  body {
-    background: #000;
-    color: #fff;
+  @media (prefers-color-scheme: light) {
+    body {
+      background-image: url("../images/nnnoise-light.svg");
+    }
   }
 
-  h1,
-  h2 {
-    color: #fff;
+  @media (prefers-contrast: more) {
+    body {
+      background: #000;
+      color: #fff;
+    }
+
+    h1,
+    h2 {
+      color: #fff;
+    }
   }
-}
 
-/* Reduced motion preference */
+  /* Reduced motion preference */
 
-@media (prefers-reduced-motion: no-preference) {
-  :focus,
-  :hover {
-    transition: outline-offset 0.25s ease;
-    outline-offset: 5px;
+  @media (prefers-reduced-motion: no-preference) {
+    :focus,
+    :hover {
+      transition: outline-offset 0.25s ease;
+      outline-offset: 5px;
+    }
   }
 }
