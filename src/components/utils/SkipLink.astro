@@ -3,14 +3,10 @@ import { Image } from "astro:assets";
 import arrow from "@images/arrow-upward.svg";
 ---
 
-<a href="#main" id="skip-link"
-  >Skip to main content <Image
-    alt="Arrow down"
-    height={36}
-    src={arrow}
-    width={36}
-  /></a
->
+<a href="#main" id="skip-link">
+  Skip to main content
+  <Image alt="" height={36} src={arrow} width={36} />
+</a>
 
 <style>
   a {
